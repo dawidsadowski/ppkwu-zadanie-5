@@ -18,7 +18,7 @@ Dla danego zapytania:
 http://localhost:8080/api/elektryk
 ```
 Otrzymamy listę wyników:
-![Lista wyników](https://i.imgur.com/MZwwVhy.jpeg "Lista wyników")
+![Lista wyników](https://i.imgur.com/MZwwVhy.jpeg =250x)
 
 Po kliknięciu w przycisk `Generuj vCard`, pobierze nam się wygenerowany kontakt, który można dodać do książki telefonicznej:
-![Lista wyników](https://i.imgur.com/eQguS1V.jpeg "Lista wyników")
+![Lista wyników](https://i.imgur.com/eQguS1V.jpeg =250x)
