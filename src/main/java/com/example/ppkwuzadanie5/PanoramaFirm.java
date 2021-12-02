@@ -10,19 +10,17 @@ import java.io.IOException;
 
 public class PanoramaFirm {
 
-    static String html = "<!doctype html>\n" +
-            "<html>\n" +
-            "<head>\n" +
-            "  <title>VCard dla Panoramy Firm</title>" +
-            "  <meta charset=\"utf-8\">\n" +
-            "  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n" +
-            "</head>\n" +
-            "<body>\n";
-//            "</body>\n" +
-//            "</html>";
+    static String html;
 
     public static String getResults(String query) throws IOException {
-        html += "<div>Wyniki wyszukiwania dla frazy <b>" + query + "</b>:</div>";
+        html = "<!doctype html>\n" +
+                "<html>\n" +
+                "<head>\n" +
+                "  <title>VCard dla Panoramy Firm</title>" +
+                "  <meta charset=\"utf-8\">\n" +
+                "  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\n" +
+                "</head>\n" +
+                "<body><div>Wyniki wyszukiwania dla frazy <b>" + query + "</b>:</div>";
 
         Document doc = Jsoup.connect("https://panoramafirm.pl/" + query).get();
 
@@ -85,5 +83,13 @@ public class PanoramaFirm {
         return html;
 
         //return String.format("Wyniki wyszukiwania dla frazy <b>%s</b><br/>%s:", query, "");
+    }
+
+    public static String getVcard(String name, String image, String telephone, String email, String website, String street, String postalCode, String city) {
+        return "BEGIN:VCARD\r\n" +
+            "VERSION:4.0\r\n" +
+            "N:Doe;Jonathan;;Mr;\r\n" +
+            "FN:" + name + "\r\n" +
+            "END:VCARD\r\n";
     }
 }
