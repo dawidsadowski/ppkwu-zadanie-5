@@ -15,7 +15,7 @@ wyszukania w serwisie [Panorama Firm](https://panoramafirm.pl/).
 ## Przykład
 Dla danego zapytania:
 ```
-http://localhost:8080/api/elektryk
+http://localhost:8080/api/hydraulik
 ```
 Otrzymamy listę wyników:
 ![Lista wyników](https://i.imgur.com/MZwwVhy.jpeg)
